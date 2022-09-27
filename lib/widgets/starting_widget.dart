@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:zoho_clone/constants/color_constants.dart';
+import 'package:zoho_clone/constants/constants.dart';
+import 'package:zoho_clone/constants/text_constants.dart';
 
 class StartingWidget extends StatelessWidget {
   const StartingWidget({
@@ -13,23 +15,25 @@ class StartingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        const CircleAvatar(
-          backgroundColor: Colors.grey,
-          child: Icon(
-            Icons.close,
-            color: Colors.white,
+        Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color:  containerColor,
           ),
+          child: closeIcon,
         ),
         Expanded(
           child: ListTile(
             title: Text(
               date,
-              style: const TextStyle(fontSize: 18, color: Colors.grey),
+              style: startingWidgetTextStyle,
               textAlign: TextAlign.center,
             ),
             subtitle: const Text(
               'Present',
-              style: TextStyle(color: Colors.grey),
+              style: startingWidgetTextStyle,
               textAlign: TextAlign.center,
             ),
           ),

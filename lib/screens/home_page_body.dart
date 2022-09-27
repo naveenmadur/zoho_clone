@@ -37,7 +37,7 @@ class _HomePageBodyState extends State<HomePageBody> {
         padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
         height: MediaQuery.of(context).size.height / 2,
         decoration: BoxDecoration(
-            color: Colors.grey.shade900,
+            color: containerColor,
             borderRadius: BorderRadius.circular(30)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

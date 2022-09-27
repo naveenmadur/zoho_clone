@@ -16,4 +16,5 @@ const List<Widget> bottomNavBarList = [
   HomePageBody(),
   DetailsScreen(),
 ];
+const Icon closeIcon =  Icon(Icons.close,color: iconColor,);
 

@@ -10,3 +10,4 @@ const String checkOutText = 'Check-Out';
 const TextStyle buttonTextStyle =  TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: Colors.white);
 
 const TextStyle detailsScreenTextStyle = TextStyle(color: Colors.white);
+const TextStyle startingWidgetTextStyle = TextStyle(fontSize: 18, color: Colors.grey);
