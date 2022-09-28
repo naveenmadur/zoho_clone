@@ -44,13 +44,13 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
-                  color: appBarIconColor,
+                  color: greyColor,
                 ),
                 label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.list,
-                  color: appBarIconColor,
+                  color: greyColor,
                 ),
                 label: 'Details')
           ],

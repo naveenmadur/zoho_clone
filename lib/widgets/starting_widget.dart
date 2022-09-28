@@ -19,7 +19,7 @@ class StartingWidget extends StatelessWidget {
           width: 40,
           height: 40,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: closeButtonBorderRadius,
             color:  containerColor,
           ),
           child: closeIcon,

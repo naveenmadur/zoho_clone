@@ -8,8 +8,8 @@ const EdgeInsetsGeometry appBarImageMargin = EdgeInsets.only(left: 10, bottom: 1
 const Image appBarImage = Image(fit: BoxFit.fill, image: NetworkImage('https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'));
 
 const List<Widget> appBarActionsList = [
-  IconButton(icon: Icon(Icons.search, color: appBarIconColor), onPressed: null,),
-              IconButton(icon: Icon(Icons.notifications_active, color: appBarIconColor,), onPressed: null,)
+  IconButton(icon: Icon(Icons.search, color: greyColor), onPressed: null,),
+              IconButton(icon: Icon(Icons.notifications_active, color: greyColor,), onPressed: null,)
 ];
 
 const List<Widget> bottomNavBarList = [
@@ -17,4 +17,6 @@ const List<Widget> bottomNavBarList = [
   DetailsScreen(),
 ];
 const Icon closeIcon =  Icon(Icons.close,color: iconColor,);
+BorderRadiusGeometry closeButtonBorderRadius = BorderRadius.circular(15);
 
+const Icon sunIcon = Icon(Icons.wb_sunny_sharp,color: Colors.yellow,size: 90,);
