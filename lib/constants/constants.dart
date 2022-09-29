@@ -20,3 +20,10 @@ const Icon closeIcon =  Icon(Icons.close,color: iconColor,);
 BorderRadiusGeometry closeButtonBorderRadius = BorderRadius.circular(15);
 
 const Icon sunIcon = Icon(Icons.wb_sunny_sharp,color: Colors.yellow,size: 90,);
+
+const EdgeInsetsGeometry dateIconPadding = EdgeInsets.only(left: 10);
+
+ TextStyle timeContainerTextStyle = TextStyle(
+            fontSize: 30,
+            color: Colors.grey.shade400,
+            fontWeight: FontWeight.bold);

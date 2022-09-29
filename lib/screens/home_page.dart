@@ -24,10 +24,10 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: blackColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.black,
+        backgroundColor: blackColor,
         leading: Container(
             margin: appBarImageMargin,
             child: ClipRRect(
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: bottomNavBarList[_index],
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.black,
+          backgroundColor: blackColor,
           showSelectedLabels: false,
           items: const [
             BottomNavigationBarItem(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 
 const Text appBarText = Text('Home',style: appBarTextStyle);
-const TextStyle appBarTextStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: appBarTextColor);
+const TextStyle appBarTextStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: greyColor);
 
 const String checkInText = 'Check-In';
 const String checkOutText = 'Check-Out';

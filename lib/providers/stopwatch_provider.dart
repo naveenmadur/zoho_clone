@@ -9,7 +9,7 @@ class StopwatchProvider extends ChangeNotifier {
   final Stopwatch _stopwatch = Stopwatch();
 
   String hour = '00';
-  String minute = '00';
+  String minute = '20';
   String second = '00';
   Timer? _timer;
   bool isStarted = false;

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:zoho_clone/constants/constants.dart';
 import 'package:zoho_clone/providers/stopwatch_provider.dart';
 import 'package:zoho_clone/providers/times_provider.dart';
 import 'package:zoho_clone/widgets/time_container.dart';
@@ -21,7 +22,7 @@ class _HomePageBodyState extends State<HomePageBody> {
       padding: const EdgeInsets.all(5),
       child: const Text(
         ':',
-        style: TextStyle(fontSize: 40, color: Colors.grey),
+        style: TextStyle(fontSize: 40, color: greyColor),
       ),
     );
   }
@@ -45,11 +46,7 @@ class _HomePageBodyState extends State<HomePageBody> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const <Widget>[
-                Icon(
-                  Icons.wb_sunny_sharp,
-                  color: Colors.yellow,
-                  size: 90,
-                )
+                sunIcon
               ],
             ),
             Consumer<StopwatchProvider>(
@@ -68,11 +65,11 @@ class _HomePageBodyState extends State<HomePageBody> {
             ),
             const Divider(
               thickness: 5,
-              color: Colors.grey,
+              color: greyColor,
             ),
             const Text(
               'General 09:00 AM to 09:00 PM',
-              style: TextStyle(fontSize: 15, color: Colors.grey),
+              style: TextStyle(fontSize: 15, color: greyColor),
             ),
             GestureDetector(
               onTap: () {

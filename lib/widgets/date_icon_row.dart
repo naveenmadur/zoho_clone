@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zoho_clone/constants/color_constants.dart';
+import 'package:zoho_clone/constants/constants.dart';
 import 'package:zoho_clone/constants/text_constants.dart';
 
 class DateIconRow extends StatelessWidget {
@@ -15,10 +17,10 @@ class DateIconRow extends StatelessWidget {
       children: [
         Text(date, style: detailsScreenTextStyle),
         Container(
-          margin: const EdgeInsets.only(left: 10),
+          margin: dateIconPadding ,
           child: const Icon(
             Icons.mobile_friendly,
-            color: Colors.grey,
+            color: greyColor,
           ),
         )
       ],
