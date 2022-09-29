@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zoho_clone/providers/stopwatch2.dart';
 import 'package:zoho_clone/providers/stopwatch_provider.dart';
 import 'package:zoho_clone/providers/times_provider.dart';
 import 'package:zoho_clone/screens/home_page.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<StopwatchProvider>(create: (context) => StopwatchProvider()),
-        ChangeNotifierProvider<TimesProvider>(create: ((context) => TimesProvider()),)
+        ChangeNotifierProvider<TimesProvider>(create: ((context) => TimesProvider()),),
+        ChangeNotifierProvider<Stopwatch2>(create: ((context) => Stopwatch2()))
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

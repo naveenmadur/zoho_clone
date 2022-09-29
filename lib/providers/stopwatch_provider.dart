@@ -9,7 +9,7 @@ class StopwatchProvider extends ChangeNotifier {
   final Stopwatch _stopwatch = Stopwatch();
 
   String hour = '00';
-  String minute = '20';
+  String minute = '00';
   String second = '00';
   Timer? _timer;
   bool isStarted = false;
@@ -22,6 +22,7 @@ class StopwatchProvider extends ChangeNotifier {
     } else {
       _stopwatch.start();
       isStarted = true;
+      
       _timer = Timer.periodic(const Duration(microseconds: 1), (timer) {
         second = (_stopwatch.elapsed.inSeconds % 60).toString().padLeft(2, '0');
         minute = (_stopwatch.elapsed.inMinutes % 60).toString().padLeft(2, '0');
