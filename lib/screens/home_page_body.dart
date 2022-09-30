@@ -1,7 +1,5 @@
-import 'dart:async';
 import 'package:zoho_clone/constants/constants.dart';
 import 'package:zoho_clone/providers/stopwatch2.dart';
-import 'package:zoho_clone/providers/stopwatch_provider.dart';
 import 'package:zoho_clone/providers/times_provider.dart';
 import 'package:zoho_clone/widgets/time_container.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +7,6 @@ import 'package:zoho_clone/constants/color_constants.dart';
 import 'package:zoho_clone/constants/text_constants.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePageBody extends StatefulWidget {
   const HomePageBody({Key? key}) : super(key: key);
@@ -17,7 +14,6 @@ class HomePageBody extends StatefulWidget {
   @override
   State<HomePageBody> createState() => _HomePageBodyState();
 }
-
 
 class _HomePageBodyState extends State<HomePageBody> {
   Container colon() {
@@ -31,17 +27,10 @@ class _HomePageBodyState extends State<HomePageBody> {
   }
 
   @override
-  void initState() {
-    Provider.of<Stopwatch2>(context, listen: false).getIntValuesSF();
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     final timeProvider = Provider.of<TimesProvider>(context);
-    // final stopWatchProvider =
-    //     Provider.of<StopwatchProvider>(context);
     final stopWatch = Provider.of<Stopwatch2>(context);
+
     return SafeArea(
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
@@ -58,9 +47,7 @@ class _HomePageBodyState extends State<HomePageBody> {
             ),
             Consumer<Stopwatch2>(
               builder: ((context, value, child) {
-                stopWatch.addIntToSF(t: Time.hour, duration: value.hour);
-                stopWatch.addIntToSF(t: Time.minute, duration: value.minute);
-                stopWatch.addIntToSF(t: Time.second, duration: value.seconds);
+            
                 return Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -89,6 +76,7 @@ class _HomePageBodyState extends State<HomePageBody> {
             ),
             GestureDetector(
               onTap: () {
+                print('Is Started : ${stopWatch.isStarted}');
                 if (stopWatch.isStarted == false &&
                     stopWatch.isStopped == false) {
                   stopWatch.startTimer();
@@ -106,6 +94,8 @@ class _HomePageBodyState extends State<HomePageBody> {
                       DateFormat.jm().format(DateTime.now()).toString(),
                       DateFormat('dd-MMM-yyyy').format(DateTime.now()));
                 }
+
+                print('Is Stopped : ${stopWatch.isStopped}');
               },
               child: Container(
                   width: MediaQuery.of(context).size.width / 2.5,

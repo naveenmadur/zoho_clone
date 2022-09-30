@@ -19,23 +19,39 @@ class Stopwatch2 extends ChangeNotifier {
   bool get isStopped => _isStopped;
   SharedPreferences? prefs;
 
+  // clearSF() {
+  //   prefs!.clear();
+  // }
 
-  addIntToSF({required Time t, required int duration}) async {
-    prefs = await SharedPreferences.getInstance();
-    await prefs!.setInt(t.toString(), duration);
-  }
+  // addIntToSF({required Time t, required int duration}) async {
+  //   prefs = await SharedPreferences.getInstance();
+  //   await prefs!.setInt(t.toString(), duration);
+  // }
 
-  addBoolToSF({required String key, required bool value}) async {
-    prefs = await SharedPreferences.getInstance();
-    await prefs!.setBool(key, value);
-  }
+  // addBoolToSF({required String key, required bool value}) async {
+  //   prefs = await SharedPreferences.getInstance();
+  //   await prefs!.setBool(key, value);
+  //   notifyListeners();
+  // }
 
-  getIntValuesSF() async {
-  prefs = await SharedPreferences.getInstance();
-    _hour = prefs!.getInt(Time.hour.toString())!;
-    _minute = prefs!.getInt(Time.minute.toString())!;
-    _seconds = prefs!.getInt(Time.second.toString())!;
-}
+  // Future<void> getBoolValuesSF() async {
+  //   prefs = await SharedPreferences.getInstance();
+  //   _isStarted = prefs!.getBool('isStarted')!;
+  //   _isStopped = prefs!.getBool('isStopped')!;
+  //   notifyListeners();
+  // }
+
+  // Future<bool> getIntValuesSF() async {
+  // prefs = await SharedPreferences.getInstance();
+  //   _hour = prefs!.getInt(Time.hour.toString())??0;
+  //   _minute = prefs!.getInt(Time.minute.toString())??0;
+  //   _seconds = prefs!.getInt(Time.second.toString())??0;
+  //   notifyListeners();
+  //   if(_hour == 0 && _minute == 0 && _seconds ==0 ){
+  //     return false;
+  //   }
+  //   return true;
+  // }
 
   void handelStopWatch() {
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
@@ -55,10 +71,9 @@ class Stopwatch2 extends ChangeNotifier {
   }
 
   void startTimer() {
-    getIntValuesSF();
-    handelStopWatch();
     _isStarted = true;
     _isStopped = false;
+    handelStopWatch();
   }
 
   void stopTimer() {

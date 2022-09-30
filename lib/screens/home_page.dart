@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:zoho_clone/constants/color_constants.dart';
 import 'package:zoho_clone/constants/constants.dart';
 import 'package:zoho_clone/constants/text_constants.dart';
-import 'package:zoho_clone/screens/details_screen.dart';
-import 'package:zoho_clone/screens/home_page_body.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zoho_clone/constants/color_constants.dart';
-import 'package:zoho_clone/constants/text_constants.dart';
 import 'package:intl/intl.dart';
-import 'package:zoho_clone/providers/stopwatch_provider.dart';
 import 'package:zoho_clone/providers/times_provider.dart';
 import 'package:zoho_clone/widgets/starting_widget.dart';
 import 'package:provider/provider.dart';
